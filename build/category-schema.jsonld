@@ -1,0 +1,29 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "FIGS Dubai",
+  "url": "https://futureindoglobalservices.ae/",
+  "description": "Premium dry fruits, spices, and tea from Dubai. Future Indo Global Services Dubai.",
+  "@id": "https://futureindoglobalservices.ae/#store",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Product Categories",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Dry Fruits",
+        "url": "https://futureindoglobalservices.ae/products/dry-fruits"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Spices",
+        "url": "https://futureindoglobalservices.ae/products/spices"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Tea",
+        "url": "https://futureindoglobalservices.ae/products/tea"
+      }
+    ]
+  }
+} 

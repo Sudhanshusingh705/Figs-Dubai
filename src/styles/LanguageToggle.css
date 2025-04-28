@@ -1,0 +1,157 @@
+.language-toggle {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+/* When inside header, reset the position */
+.header .language-toggle {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  z-index: 1;
+}
+
+/* Icon-only button */
+.language-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 60, 114, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.header .language-btn {
+  background: #2a5298;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  width: 34px;
+  height: 34px;
+}
+
+.language-btn:hover {
+  background: rgba(30, 60, 114, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.header .language-btn:hover {
+  background: #1c3c70;
+}
+
+.language-icon {
+  font-size: 18px;
+}
+
+/* Active state with close button */
+.language-toggle.is-active .language-btn {
+  display: none;
+}
+
+.language-toggle-active {
+  display: flex;
+  align-items: center;
+  background: #2a5298;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.language-status {
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.language-close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+
+.language-close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.close-icon {
+  font-size: 20px;
+  line-height: 1;
+  position: relative;
+  top: -1px;
+}
+
+@media (max-width: 768px) {
+  .language-toggle {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .language-btn {
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+    font-size: 13px;
+  }
+  
+  .header .language-btn {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .language-toggle-active {
+    padding: 4px 10px;
+  }
+  
+  .language-status {
+    font-size: 12px;
+  }
+  
+  .close-icon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .language-btn {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.language-btn.active {
+  animation: pulse 2s infinite;
+}
+
+/* Disable pulse animation in header to prevent distraction */
+.header .language-btn.active {
+  animation: none;
+} 
